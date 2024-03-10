@@ -218,6 +218,7 @@ userRouter.get("/bulk",authMiddleware, async (req,res)=>{
        }
        else
        {
+        // hello
          const users2 = users.map((user)=>{
               return {
                 username : user.username,
