@@ -5,8 +5,13 @@ const { number, string } = require ('zod');
 
 const { Schema } = mongoose;
 
-mongoose.connect("mongodb+srv://nikhilsaini735510:Nikhil123@cluster0.tm5ngc9.mongodb.net/"); 
+async function EstablishConnection(){
+    console.log("connection started")
+    await mongoose.connect("mongodb+srv://nikhilsaini735510:Nikhil123@cluster0.tm5ngc9.mongodb.net/"); 
+    console.log("connection made")
+}
 
+EstablishConnection();
 // const UserSchema = new Schema({
 //     UserName : String ,
 //     Password : String,
